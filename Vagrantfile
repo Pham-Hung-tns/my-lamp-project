@@ -14,4 +14,7 @@ Vagrant.configure("2") do |config|
   # 3. Cau hinh thu muc dong bo
   config.vm.synced_folder "./src", "/var/www/project"
 
+  # 4. Cau hinh Provisioning
+  config.vm.provision "shell", path: "scripts/bootstrap.sh"
+
 end
